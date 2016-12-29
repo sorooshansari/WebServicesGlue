@@ -60,6 +60,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dbManager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service References\accountingwebservice\Reference.cs">
@@ -67,9 +68,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\PayvastWS\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="tools.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\accountingwebservice\accountingwebservice.wsdl" />
     <None Include="Service References\accountingwebservice\testApp.accountingwebservice.GetCoInfoByCodeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -92,12 +101,26 @@
     <None Include="Service References\accountingwebservice\testApp.accountingwebservice.GetProjectInfoResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Service References\PayvastWS\AccountingService.wsdl" />
+    <None Include="Service References\PayvastWS\testApp.PayvastWS.AccountTransaction.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayvastWS\testApp.PayvastWS.CustomerType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayvastWS\testApp.PayvastWS.GetFiscalPeriodIdResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\PayvastWS\testApp.PayvastWS.Merchandise.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\accountingwebservice\" />
+    <WCFMetadataStorage Include="Service References\PayvastWS\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\accountingwebservice\accountingwebservice.disco" />
@@ -125,6 +148,21 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayvastWS\AccountingService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayvastWS\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayvastWS\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\PayvastWS\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using testApp.accountingwebservice;
 
 namespace testApp
 {
@@ -11,9 +11,9 @@ namespace testApp
     {
         static void Main(string[] args)
         {
-            AccountingWebServiceSoapClient client = new AccountingWebServiceSoapClient();
-            string res = client.GetNewMembersCodeByType(10, MemberType.Permanent, "SNMFAccounting", "SNMFAccounting");
-            Console.WriteLine(res);
+            WebServicesTools wsTools = new WebServicesTools();
+            wsTools.startImporting();
+            var a = Console.ReadLine();
         }
     }
 }

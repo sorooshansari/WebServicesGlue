@@ -1,0 +1,2640 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddLegalCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nationalIdentiry" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cellPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="management" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registerationNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="registrationLocation" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registrationDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="subscriptionCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="econumicCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="credit" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentAccountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentFloatingAccountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddLegalCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddLegalCustomerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRealCustomer">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="Firstname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="lastName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="title" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="nationalCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="phone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fax" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="cellPhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fatherName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="registerationNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="registrationLocation" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="registrationDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="subscriptionCode" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="zipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="econumicCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="credit" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="email" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="address" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentAccountId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parentFloatingAccountId" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddRealCustomerResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddRealCustomerResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustomerTypes">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetCustomerTypesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustomerTypesResult" type="tns:ArrayOfCustomerType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCustomerType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CustomerType" nillable="true" type="tns:CustomerType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CustomerType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateFactor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="number" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="referenceNumber" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="customString1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="factorType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateFactorResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateFactorResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddArticle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="factorId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="merchandiseId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitPrice" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="auxAmount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="vTax" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="discount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="stockRoomId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddArticleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddArticleByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="factorId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="merchandiseCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitPrice" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="auxAmount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="vTax" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="discount" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="stockRoomId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddArticleByCodeResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddCost">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="factorId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="isIncremental" type="s:boolean" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddCostResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CommitFactor">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="factorId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitFactorResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CreateReceiptOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="no" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="type" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="reference" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="stockRoom" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="referenceNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount5" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="customerId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateReceiptOrderResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateReceiptOrderResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddReceiptOrderArticle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="receiptOrderId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="merchandiseId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="amount" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitPrice" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="floatingAccount5" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddReceiptOrderArticleResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddReceiptOrderArticleResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddReceiptOrderSerial">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="receiptOrderId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="receiptOrderArticleId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="serial" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="expiryDate" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddReceiptOrderSerialResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CommitReceiptOrder">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="receiptOrderId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitReceiptOrderResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddMerchandise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="technicalNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMerchandiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddMerchandiseResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMerchandiseReturnsCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="technicalNumber" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="unitId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMerchandiseReturnsCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddMerchandiseReturnsCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseRemainForAllStockRooms">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchandiseCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseRemainForAllStockRoomsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMerchandiseRemainForAllStockRoomsResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseRemain">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchandiseCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="stockRoomId" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseRemainResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMerchandiseRemainResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseLastBuyRate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="merchandiseCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseLastBuyRateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetMerchandiseLastBuyRateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMerchandiseUnit">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddMerchandiseUnitResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddMerchandiseUnitResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetMerchandiseListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMerchandiseListResult" type="tns:ArrayOfMerchandise" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfMerchandise">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Merchandise" nillable="true" type="tns:Merchandise" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Merchandise">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Id" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="EnglishName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TechnicalCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IranCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="UnitId" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Unit" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FiscalPeriod" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CreateAccountingTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="number" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="description" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateAccountingTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CreateAccountingTransactionResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAccountingArticle">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="debit" type="s:double" />
+            <s:element minOccurs="1" maxOccurs="1" name="credit" type="s:double" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAccountingArticleResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="CommitAccountingTransaction">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="transactionId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CommitAccountingTransactionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CommitAccountingTransactionResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountBalance">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="date" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountBalanceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetAccountBalanceResult" type="s:double" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountTransactions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="startDate" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="endDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="account" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount3" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount4" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="flowtingAccount5" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountTransactionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountTransactionsResult" type="tns:ArrayOfAccountTransaction" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfAccountTransaction">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="AccountTransaction" nillable="true" type="tns:AccountTransaction" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AccountTransaction">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionNumber" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransactionDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArticleDescrioption" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Debit" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Credit" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parentCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFloatingAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parentCode" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFloatingAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddFloatingAccountResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFloatingAccountWithSpecifiedCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="parentCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="fiscalPeriod" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="name" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddFloatingAccountWithSpecifiedCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddFloatingAccountWithSpecifiedCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFiscalPeriodId">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="date" nillable="true" type="s:dateTime" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFiscalPeriodIdResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFiscalPeriodIdResult" nillable="true" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="int" type="s:int" />
+      <s:element name="ArrayOfCustomerType" nillable="true" type="tns:ArrayOfCustomerType" />
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="double" type="s:double" />
+      <s:element name="ArrayOfMerchandise" nillable="true" type="tns:ArrayOfMerchandise" />
+      <s:element name="ArrayOfAccountTransaction" nillable="true" type="tns:ArrayOfAccountTransaction" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddLegalCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:AddLegalCustomer" />
+  </wsdl:message>
+  <wsdl:message name="AddLegalCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:AddLegalCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddRealCustomerSoapIn">
+    <wsdl:part name="parameters" element="tns:AddRealCustomer" />
+  </wsdl:message>
+  <wsdl:message name="AddRealCustomerSoapOut">
+    <wsdl:part name="parameters" element="tns:AddRealCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerTypesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustomerTypes" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerTypesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustomerTypesResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateFactorSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateFactor" />
+  </wsdl:message>
+  <wsdl:message name="CreateFactorSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateFactorResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleSoapIn">
+    <wsdl:part name="parameters" element="tns:AddArticle" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleSoapOut">
+    <wsdl:part name="parameters" element="tns:AddArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddArticleByCode" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddArticleByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddCostSoapIn">
+    <wsdl:part name="parameters" element="tns:AddCost" />
+  </wsdl:message>
+  <wsdl:message name="AddCostSoapOut">
+    <wsdl:part name="parameters" element="tns:AddCostResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommitFactorSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitFactor" />
+  </wsdl:message>
+  <wsdl:message name="CommitFactorSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitFactorResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateReceiptOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateReceiptOrder" />
+  </wsdl:message>
+  <wsdl:message name="CreateReceiptOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateReceiptOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderArticleSoapIn">
+    <wsdl:part name="parameters" element="tns:AddReceiptOrderArticle" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderArticleSoapOut">
+    <wsdl:part name="parameters" element="tns:AddReceiptOrderArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderSerialSoapIn">
+    <wsdl:part name="parameters" element="tns:AddReceiptOrderSerial" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderSerialSoapOut">
+    <wsdl:part name="parameters" element="tns:AddReceiptOrderSerialResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommitReceiptOrderSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitReceiptOrder" />
+  </wsdl:message>
+  <wsdl:message name="CommitReceiptOrderSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitReceiptOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMerchandise" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMerchandiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseReturnsCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMerchandiseReturnsCode" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseReturnsCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMerchandiseReturnsCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainForAllStockRoomsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseRemainForAllStockRooms" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainForAllStockRoomsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseRemainForAllStockRoomsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseRemain" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseRemainResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseLastBuyRateSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseLastBuyRate" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseLastBuyRateSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseLastBuyRateResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseUnitSoapIn">
+    <wsdl:part name="parameters" element="tns:AddMerchandiseUnit" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseUnitSoapOut">
+    <wsdl:part name="parameters" element="tns:AddMerchandiseUnitResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseList" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMerchandiseListResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountingTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateAccountingTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountingTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateAccountingTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountingArticleSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAccountingArticle" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountingArticleSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAccountingArticleResponse" />
+  </wsdl:message>
+  <wsdl:message name="CommitAccountingTransactionSoapIn">
+    <wsdl:part name="parameters" element="tns:CommitAccountingTransaction" />
+  </wsdl:message>
+  <wsdl:message name="CommitAccountingTransactionSoapOut">
+    <wsdl:part name="parameters" element="tns:CommitAccountingTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountBalance" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountBalanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountTransactionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountTransactions" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountTransactionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountTransactionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFloatingAccount" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFloatingAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountWithSpecifiedCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:AddFloatingAccountWithSpecifiedCode" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountWithSpecifiedCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:AddFloatingAccountWithSpecifiedCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFiscalPeriodIdSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFiscalPeriodId" />
+  </wsdl:message>
+  <wsdl:message name="GetFiscalPeriodIdSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFiscalPeriodIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddLegalCustomerHttpGetIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="nationalIdentiry" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="fax" type="s:string" />
+    <wsdl:part name="cellPhone" type="s:string" />
+    <wsdl:part name="management" type="s:string" />
+    <wsdl:part name="registerationNumber" type="s:string" />
+    <wsdl:part name="registrationLocation" type="s:string" />
+    <wsdl:part name="registrationDate" type="s:string" />
+    <wsdl:part name="subscriptionCode" type="s:string" />
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="econumicCode" type="s:string" />
+    <wsdl:part name="credit" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="parentAccountId" type="s:string" />
+    <wsdl:part name="parentFloatingAccountId" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLegalCustomerHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddRealCustomerHttpGetIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="Firstname" type="s:string" />
+    <wsdl:part name="lastName" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="nationalCode" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="fax" type="s:string" />
+    <wsdl:part name="cellPhone" type="s:string" />
+    <wsdl:part name="fatherName" type="s:string" />
+    <wsdl:part name="registerationNumber" type="s:string" />
+    <wsdl:part name="registrationLocation" type="s:string" />
+    <wsdl:part name="registrationDate" type="s:string" />
+    <wsdl:part name="subscriptionCode" type="s:string" />
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="econumicCode" type="s:string" />
+    <wsdl:part name="credit" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="parentAccountId" type="s:string" />
+    <wsdl:part name="parentFloatingAccountId" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRealCustomerHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerTypesHttpGetIn" />
+  <wsdl:message name="GetCustomerTypesHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCustomerType" />
+  </wsdl:message>
+  <wsdl:message name="CreateFactorHttpGetIn">
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="customerId" type="s:string" />
+    <wsdl:part name="referenceNumber" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="customString1" type="s:string" />
+    <wsdl:part name="floatingAccount" type="s:string" />
+    <wsdl:part name="factorType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateFactorHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleHttpGetIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="merchandiseId" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="unitPrice" type="s:string" />
+    <wsdl:part name="auxAmount" type="s:string" />
+    <wsdl:part name="vTax" type="s:string" />
+    <wsdl:part name="discount" type="s:string" />
+    <wsdl:part name="stockRoomId" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleHttpGetOut" />
+  <wsdl:message name="AddArticleByCodeHttpGetIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="merchandiseCode" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="unitPrice" type="s:string" />
+    <wsdl:part name="auxAmount" type="s:string" />
+    <wsdl:part name="vTax" type="s:string" />
+    <wsdl:part name="discount" type="s:string" />
+    <wsdl:part name="stockRoomId" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleByCodeHttpGetOut" />
+  <wsdl:message name="AddCostHttpGetIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="isIncremental" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="floatingAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddCostHttpGetOut" />
+  <wsdl:message name="CommitFactorHttpGetIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CommitFactorHttpGetOut" />
+  <wsdl:message name="CreateReceiptOrderHttpGetIn">
+    <wsdl:part name="no" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="reference" type="s:string" />
+    <wsdl:part name="stockRoom" type="s:string" />
+    <wsdl:part name="referenceNo" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="floatingAccount1" type="s:string" />
+    <wsdl:part name="floatingAccount2" type="s:string" />
+    <wsdl:part name="floatingAccount3" type="s:string" />
+    <wsdl:part name="floatingAccount4" type="s:string" />
+    <wsdl:part name="floatingAccount5" type="s:string" />
+    <wsdl:part name="customerId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateReceiptOrderHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderArticleHttpGetIn">
+    <wsdl:part name="receiptOrderId" type="s:string" />
+    <wsdl:part name="merchandiseId" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="unitPrice" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="floatingAccount1" type="s:string" />
+    <wsdl:part name="floatingAccount2" type="s:string" />
+    <wsdl:part name="floatingAccount3" type="s:string" />
+    <wsdl:part name="floatingAccount4" type="s:string" />
+    <wsdl:part name="floatingAccount5" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderArticleHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderSerialHttpGetIn">
+    <wsdl:part name="receiptOrderId" type="s:string" />
+    <wsdl:part name="receiptOrderArticleId" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="expiryDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderSerialHttpGetOut" />
+  <wsdl:message name="CommitReceiptOrderHttpGetIn">
+    <wsdl:part name="receiptOrderId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CommitReceiptOrderHttpGetOut" />
+  <wsdl:message name="AddMerchandiseHttpGetIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="technicalNumber" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseReturnsCodeHttpGetIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="technicalNumber" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseReturnsCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainForAllStockRoomsHttpGetIn">
+    <wsdl:part name="merchandiseCode" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainForAllStockRoomsHttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainHttpGetIn">
+    <wsdl:part name="merchandiseCode" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="stockRoomId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainHttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseLastBuyRateHttpGetIn">
+    <wsdl:part name="merchandiseCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseLastBuyRateHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseUnitHttpGetIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseUnitHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseListHttpGetIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseListHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMerchandise" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountingTransactionHttpGetIn">
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountingTransactionHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountingArticleHttpGetIn">
+    <wsdl:part name="transactionId" type="s:string" />
+    <wsdl:part name="debit" type="s:string" />
+    <wsdl:part name="credit" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="flowtingAccount1" type="s:string" />
+    <wsdl:part name="flowtingAccount2" type="s:string" />
+    <wsdl:part name="flowtingAccount3" type="s:string" />
+    <wsdl:part name="flowtingAccount4" type="s:string" />
+    <wsdl:part name="flowtingAccount5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountingArticleHttpGetOut" />
+  <wsdl:message name="CommitAccountingTransactionHttpGetIn">
+    <wsdl:part name="transactionId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CommitAccountingTransactionHttpGetOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceHttpGetIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="flowtingAccount1" type="s:string" />
+    <wsdl:part name="flowtingAccount2" type="s:string" />
+    <wsdl:part name="flowtingAccount3" type="s:string" />
+    <wsdl:part name="flowtingAccount4" type="s:string" />
+    <wsdl:part name="flowtingAccount5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceHttpGetOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountTransactionsHttpGetIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="flowtingAccount1" type="s:string" />
+    <wsdl:part name="flowtingAccount2" type="s:string" />
+    <wsdl:part name="flowtingAccount3" type="s:string" />
+    <wsdl:part name="flowtingAccount4" type="s:string" />
+    <wsdl:part name="flowtingAccount5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountTransactionsHttpGetOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAccountTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountHttpGetIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountHttpGetIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountWithSpecifiedCodeHttpGetIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="code" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountWithSpecifiedCodeHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLegalCustomerHttpPostIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="nationalIdentiry" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="fax" type="s:string" />
+    <wsdl:part name="cellPhone" type="s:string" />
+    <wsdl:part name="management" type="s:string" />
+    <wsdl:part name="registerationNumber" type="s:string" />
+    <wsdl:part name="registrationLocation" type="s:string" />
+    <wsdl:part name="registrationDate" type="s:string" />
+    <wsdl:part name="subscriptionCode" type="s:string" />
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="econumicCode" type="s:string" />
+    <wsdl:part name="credit" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="parentAccountId" type="s:string" />
+    <wsdl:part name="parentFloatingAccountId" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddLegalCustomerHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddRealCustomerHttpPostIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="Firstname" type="s:string" />
+    <wsdl:part name="lastName" type="s:string" />
+    <wsdl:part name="title" type="s:string" />
+    <wsdl:part name="nationalCode" type="s:string" />
+    <wsdl:part name="phone" type="s:string" />
+    <wsdl:part name="fax" type="s:string" />
+    <wsdl:part name="cellPhone" type="s:string" />
+    <wsdl:part name="fatherName" type="s:string" />
+    <wsdl:part name="registerationNumber" type="s:string" />
+    <wsdl:part name="registrationLocation" type="s:string" />
+    <wsdl:part name="registrationDate" type="s:string" />
+    <wsdl:part name="subscriptionCode" type="s:string" />
+    <wsdl:part name="zipCode" type="s:string" />
+    <wsdl:part name="econumicCode" type="s:string" />
+    <wsdl:part name="credit" type="s:string" />
+    <wsdl:part name="email" type="s:string" />
+    <wsdl:part name="address" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="parentAccountId" type="s:string" />
+    <wsdl:part name="parentFloatingAccountId" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddRealCustomerHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetCustomerTypesHttpPostIn" />
+  <wsdl:message name="GetCustomerTypesHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfCustomerType" />
+  </wsdl:message>
+  <wsdl:message name="CreateFactorHttpPostIn">
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="customerId" type="s:string" />
+    <wsdl:part name="referenceNumber" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="customString1" type="s:string" />
+    <wsdl:part name="floatingAccount" type="s:string" />
+    <wsdl:part name="factorType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateFactorHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleHttpPostIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="merchandiseId" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="unitPrice" type="s:string" />
+    <wsdl:part name="auxAmount" type="s:string" />
+    <wsdl:part name="vTax" type="s:string" />
+    <wsdl:part name="discount" type="s:string" />
+    <wsdl:part name="stockRoomId" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleHttpPostOut" />
+  <wsdl:message name="AddArticleByCodeHttpPostIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="merchandiseCode" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="unitPrice" type="s:string" />
+    <wsdl:part name="auxAmount" type="s:string" />
+    <wsdl:part name="vTax" type="s:string" />
+    <wsdl:part name="discount" type="s:string" />
+    <wsdl:part name="stockRoomId" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddArticleByCodeHttpPostOut" />
+  <wsdl:message name="AddCostHttpPostIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="isIncremental" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="floatingAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddCostHttpPostOut" />
+  <wsdl:message name="CommitFactorHttpPostIn">
+    <wsdl:part name="factorId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CommitFactorHttpPostOut" />
+  <wsdl:message name="CreateReceiptOrderHttpPostIn">
+    <wsdl:part name="no" type="s:string" />
+    <wsdl:part name="type" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="reference" type="s:string" />
+    <wsdl:part name="stockRoom" type="s:string" />
+    <wsdl:part name="referenceNo" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="floatingAccount1" type="s:string" />
+    <wsdl:part name="floatingAccount2" type="s:string" />
+    <wsdl:part name="floatingAccount3" type="s:string" />
+    <wsdl:part name="floatingAccount4" type="s:string" />
+    <wsdl:part name="floatingAccount5" type="s:string" />
+    <wsdl:part name="customerId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateReceiptOrderHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderArticleHttpPostIn">
+    <wsdl:part name="receiptOrderId" type="s:string" />
+    <wsdl:part name="merchandiseId" type="s:string" />
+    <wsdl:part name="amount" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="unitPrice" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="floatingAccount1" type="s:string" />
+    <wsdl:part name="floatingAccount2" type="s:string" />
+    <wsdl:part name="floatingAccount3" type="s:string" />
+    <wsdl:part name="floatingAccount4" type="s:string" />
+    <wsdl:part name="floatingAccount5" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderArticleHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderSerialHttpPostIn">
+    <wsdl:part name="receiptOrderId" type="s:string" />
+    <wsdl:part name="receiptOrderArticleId" type="s:string" />
+    <wsdl:part name="serial" type="s:string" />
+    <wsdl:part name="expiryDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddReceiptOrderSerialHttpPostOut" />
+  <wsdl:message name="CommitReceiptOrderHttpPostIn">
+    <wsdl:part name="receiptOrderId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CommitReceiptOrderHttpPostOut" />
+  <wsdl:message name="AddMerchandiseHttpPostIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="technicalNumber" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseReturnsCodeHttpPostIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="technicalNumber" type="s:string" />
+    <wsdl:part name="unitId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseReturnsCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainForAllStockRoomsHttpPostIn">
+    <wsdl:part name="merchandiseCode" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainForAllStockRoomsHttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainHttpPostIn">
+    <wsdl:part name="merchandiseCode" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="stockRoomId" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseRemainHttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseLastBuyRateHttpPostIn">
+    <wsdl:part name="merchandiseCode" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseLastBuyRateHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseUnitHttpPostIn">
+    <wsdl:part name="name" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddMerchandiseUnitHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseListHttpPostIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetMerchandiseListHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfMerchandise" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountingTransactionHttpPostIn">
+    <wsdl:part name="number" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="description" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateAccountingTransactionHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountingArticleHttpPostIn">
+    <wsdl:part name="transactionId" type="s:string" />
+    <wsdl:part name="debit" type="s:string" />
+    <wsdl:part name="credit" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="flowtingAccount1" type="s:string" />
+    <wsdl:part name="flowtingAccount2" type="s:string" />
+    <wsdl:part name="flowtingAccount3" type="s:string" />
+    <wsdl:part name="flowtingAccount4" type="s:string" />
+    <wsdl:part name="flowtingAccount5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountingArticleHttpPostOut" />
+  <wsdl:message name="CommitAccountingTransactionHttpPostIn">
+    <wsdl:part name="transactionId" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CommitAccountingTransactionHttpPostOut">
+    <wsdl:part name="Body" element="tns:int" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceHttpPostIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="date" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="flowtingAccount1" type="s:string" />
+    <wsdl:part name="flowtingAccount2" type="s:string" />
+    <wsdl:part name="flowtingAccount3" type="s:string" />
+    <wsdl:part name="flowtingAccount4" type="s:string" />
+    <wsdl:part name="flowtingAccount5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountBalanceHttpPostOut">
+    <wsdl:part name="Body" element="tns:double" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountTransactionsHttpPostIn">
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="startDate" type="s:string" />
+    <wsdl:part name="endDate" type="s:string" />
+    <wsdl:part name="account" type="s:string" />
+    <wsdl:part name="flowtingAccount1" type="s:string" />
+    <wsdl:part name="flowtingAccount2" type="s:string" />
+    <wsdl:part name="flowtingAccount3" type="s:string" />
+    <wsdl:part name="flowtingAccount4" type="s:string" />
+    <wsdl:part name="flowtingAccount5" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountTransactionsHttpPostOut">
+    <wsdl:part name="Body" element="tns:ArrayOfAccountTransaction" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountHttpPostIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddAccountHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountHttpPostIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountWithSpecifiedCodeHttpPostIn">
+    <wsdl:part name="parentCode" type="s:string" />
+    <wsdl:part name="code" type="s:string" />
+    <wsdl:part name="fiscalPeriod" type="s:string" />
+    <wsdl:part name="name" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="AddFloatingAccountWithSpecifiedCodeHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="AccountingServiceSoap">
+    <wsdl:operation name="AddLegalCustomer">
+      <wsdl:input message="tns:AddLegalCustomerSoapIn" />
+      <wsdl:output message="tns:AddLegalCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRealCustomer">
+      <wsdl:input message="tns:AddRealCustomerSoapIn" />
+      <wsdl:output message="tns:AddRealCustomerSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypes">
+      <wsdl:input message="tns:GetCustomerTypesSoapIn" />
+      <wsdl:output message="tns:GetCustomerTypesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFactor">
+      <wsdl:input message="tns:CreateFactorSoapIn" />
+      <wsdl:output message="tns:CreateFactorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticle">
+      <wsdl:input message="tns:AddArticleSoapIn" />
+      <wsdl:output message="tns:AddArticleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticleByCode">
+      <wsdl:input message="tns:AddArticleByCodeSoapIn" />
+      <wsdl:output message="tns:AddArticleByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <wsdl:input message="tns:AddCostSoapIn" />
+      <wsdl:output message="tns:AddCostSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitFactor">
+      <wsdl:input message="tns:CommitFactorSoapIn" />
+      <wsdl:output message="tns:CommitFactorSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceiptOrder">
+      <wsdl:input message="tns:CreateReceiptOrderSoapIn" />
+      <wsdl:output message="tns:CreateReceiptOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderArticle">
+      <wsdl:input message="tns:AddReceiptOrderArticleSoapIn" />
+      <wsdl:output message="tns:AddReceiptOrderArticleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderSerial">
+      <wsdl:input message="tns:AddReceiptOrderSerialSoapIn" />
+      <wsdl:output message="tns:AddReceiptOrderSerialSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitReceiptOrder">
+      <wsdl:input message="tns:CommitReceiptOrderSoapIn" />
+      <wsdl:output message="tns:CommitReceiptOrderSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandise">
+      <wsdl:input message="tns:AddMerchandiseSoapIn" />
+      <wsdl:output message="tns:AddMerchandiseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseReturnsCode">
+      <wsdl:input message="tns:AddMerchandiseReturnsCodeSoapIn" />
+      <wsdl:output message="tns:AddMerchandiseReturnsCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemainForAllStockRooms">
+      <wsdl:input message="tns:GetMerchandiseRemainForAllStockRoomsSoapIn" />
+      <wsdl:output message="tns:GetMerchandiseRemainForAllStockRoomsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemain">
+      <wsdl:input message="tns:GetMerchandiseRemainSoapIn" />
+      <wsdl:output message="tns:GetMerchandiseRemainSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseLastBuyRate">
+      <wsdl:input message="tns:GetMerchandiseLastBuyRateSoapIn" />
+      <wsdl:output message="tns:GetMerchandiseLastBuyRateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseUnit">
+      <wsdl:input message="tns:AddMerchandiseUnitSoapIn" />
+      <wsdl:output message="tns:AddMerchandiseUnitSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseList">
+      <wsdl:input message="tns:GetMerchandiseListSoapIn" />
+      <wsdl:output message="tns:GetMerchandiseListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccountingTransaction">
+      <wsdl:input message="tns:CreateAccountingTransactionSoapIn" />
+      <wsdl:output message="tns:CreateAccountingTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountingArticle">
+      <wsdl:input message="tns:AddAccountingArticleSoapIn" />
+      <wsdl:output message="tns:AddAccountingArticleSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitAccountingTransaction">
+      <wsdl:input message="tns:CommitAccountingTransactionSoapIn" />
+      <wsdl:output message="tns:CommitAccountingTransactionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <wsdl:input message="tns:GetAccountBalanceSoapIn" />
+      <wsdl:output message="tns:GetAccountBalanceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <wsdl:input message="tns:GetAccountTransactionsSoapIn" />
+      <wsdl:output message="tns:GetAccountTransactionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input message="tns:AddAccountSoapIn" />
+      <wsdl:output message="tns:AddAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccount">
+      <wsdl:input message="tns:AddFloatingAccountSoapIn" />
+      <wsdl:output message="tns:AddFloatingAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccountWithSpecifiedCode">
+      <wsdl:input message="tns:AddFloatingAccountWithSpecifiedCodeSoapIn" />
+      <wsdl:output message="tns:AddFloatingAccountWithSpecifiedCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFiscalPeriodId">
+      <wsdl:input message="tns:GetFiscalPeriodIdSoapIn" />
+      <wsdl:output message="tns:GetFiscalPeriodIdSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AccountingServiceHttpGet">
+    <wsdl:operation name="AddLegalCustomer">
+      <wsdl:input message="tns:AddLegalCustomerHttpGetIn" />
+      <wsdl:output message="tns:AddLegalCustomerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRealCustomer">
+      <wsdl:input message="tns:AddRealCustomerHttpGetIn" />
+      <wsdl:output message="tns:AddRealCustomerHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypes">
+      <wsdl:input message="tns:GetCustomerTypesHttpGetIn" />
+      <wsdl:output message="tns:GetCustomerTypesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFactor">
+      <wsdl:input message="tns:CreateFactorHttpGetIn" />
+      <wsdl:output message="tns:CreateFactorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticle">
+      <wsdl:input message="tns:AddArticleHttpGetIn" />
+      <wsdl:output message="tns:AddArticleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticleByCode">
+      <wsdl:input message="tns:AddArticleByCodeHttpGetIn" />
+      <wsdl:output message="tns:AddArticleByCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <wsdl:input message="tns:AddCostHttpGetIn" />
+      <wsdl:output message="tns:AddCostHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitFactor">
+      <wsdl:input message="tns:CommitFactorHttpGetIn" />
+      <wsdl:output message="tns:CommitFactorHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceiptOrder">
+      <wsdl:input message="tns:CreateReceiptOrderHttpGetIn" />
+      <wsdl:output message="tns:CreateReceiptOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderArticle">
+      <wsdl:input message="tns:AddReceiptOrderArticleHttpGetIn" />
+      <wsdl:output message="tns:AddReceiptOrderArticleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderSerial">
+      <wsdl:input message="tns:AddReceiptOrderSerialHttpGetIn" />
+      <wsdl:output message="tns:AddReceiptOrderSerialHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitReceiptOrder">
+      <wsdl:input message="tns:CommitReceiptOrderHttpGetIn" />
+      <wsdl:output message="tns:CommitReceiptOrderHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandise">
+      <wsdl:input message="tns:AddMerchandiseHttpGetIn" />
+      <wsdl:output message="tns:AddMerchandiseHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseReturnsCode">
+      <wsdl:input message="tns:AddMerchandiseReturnsCodeHttpGetIn" />
+      <wsdl:output message="tns:AddMerchandiseReturnsCodeHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemainForAllStockRooms">
+      <wsdl:input message="tns:GetMerchandiseRemainForAllStockRoomsHttpGetIn" />
+      <wsdl:output message="tns:GetMerchandiseRemainForAllStockRoomsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemain">
+      <wsdl:input message="tns:GetMerchandiseRemainHttpGetIn" />
+      <wsdl:output message="tns:GetMerchandiseRemainHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseLastBuyRate">
+      <wsdl:input message="tns:GetMerchandiseLastBuyRateHttpGetIn" />
+      <wsdl:output message="tns:GetMerchandiseLastBuyRateHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseUnit">
+      <wsdl:input message="tns:AddMerchandiseUnitHttpGetIn" />
+      <wsdl:output message="tns:AddMerchandiseUnitHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseList">
+      <wsdl:input message="tns:GetMerchandiseListHttpGetIn" />
+      <wsdl:output message="tns:GetMerchandiseListHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccountingTransaction">
+      <wsdl:input message="tns:CreateAccountingTransactionHttpGetIn" />
+      <wsdl:output message="tns:CreateAccountingTransactionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountingArticle">
+      <wsdl:input message="tns:AddAccountingArticleHttpGetIn" />
+      <wsdl:output message="tns:AddAccountingArticleHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitAccountingTransaction">
+      <wsdl:input message="tns:CommitAccountingTransactionHttpGetIn" />
+      <wsdl:output message="tns:CommitAccountingTransactionHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <wsdl:input message="tns:GetAccountBalanceHttpGetIn" />
+      <wsdl:output message="tns:GetAccountBalanceHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <wsdl:input message="tns:GetAccountTransactionsHttpGetIn" />
+      <wsdl:output message="tns:GetAccountTransactionsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input message="tns:AddAccountHttpGetIn" />
+      <wsdl:output message="tns:AddAccountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccount">
+      <wsdl:input message="tns:AddFloatingAccountHttpGetIn" />
+      <wsdl:output message="tns:AddFloatingAccountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccountWithSpecifiedCode">
+      <wsdl:input message="tns:AddFloatingAccountWithSpecifiedCodeHttpGetIn" />
+      <wsdl:output message="tns:AddFloatingAccountWithSpecifiedCodeHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="AccountingServiceHttpPost">
+    <wsdl:operation name="AddLegalCustomer">
+      <wsdl:input message="tns:AddLegalCustomerHttpPostIn" />
+      <wsdl:output message="tns:AddLegalCustomerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddRealCustomer">
+      <wsdl:input message="tns:AddRealCustomerHttpPostIn" />
+      <wsdl:output message="tns:AddRealCustomerHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypes">
+      <wsdl:input message="tns:GetCustomerTypesHttpPostIn" />
+      <wsdl:output message="tns:GetCustomerTypesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateFactor">
+      <wsdl:input message="tns:CreateFactorHttpPostIn" />
+      <wsdl:output message="tns:CreateFactorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticle">
+      <wsdl:input message="tns:AddArticleHttpPostIn" />
+      <wsdl:output message="tns:AddArticleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticleByCode">
+      <wsdl:input message="tns:AddArticleByCodeHttpPostIn" />
+      <wsdl:output message="tns:AddArticleByCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <wsdl:input message="tns:AddCostHttpPostIn" />
+      <wsdl:output message="tns:AddCostHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitFactor">
+      <wsdl:input message="tns:CommitFactorHttpPostIn" />
+      <wsdl:output message="tns:CommitFactorHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceiptOrder">
+      <wsdl:input message="tns:CreateReceiptOrderHttpPostIn" />
+      <wsdl:output message="tns:CreateReceiptOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderArticle">
+      <wsdl:input message="tns:AddReceiptOrderArticleHttpPostIn" />
+      <wsdl:output message="tns:AddReceiptOrderArticleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderSerial">
+      <wsdl:input message="tns:AddReceiptOrderSerialHttpPostIn" />
+      <wsdl:output message="tns:AddReceiptOrderSerialHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitReceiptOrder">
+      <wsdl:input message="tns:CommitReceiptOrderHttpPostIn" />
+      <wsdl:output message="tns:CommitReceiptOrderHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandise">
+      <wsdl:input message="tns:AddMerchandiseHttpPostIn" />
+      <wsdl:output message="tns:AddMerchandiseHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseReturnsCode">
+      <wsdl:input message="tns:AddMerchandiseReturnsCodeHttpPostIn" />
+      <wsdl:output message="tns:AddMerchandiseReturnsCodeHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemainForAllStockRooms">
+      <wsdl:input message="tns:GetMerchandiseRemainForAllStockRoomsHttpPostIn" />
+      <wsdl:output message="tns:GetMerchandiseRemainForAllStockRoomsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemain">
+      <wsdl:input message="tns:GetMerchandiseRemainHttpPostIn" />
+      <wsdl:output message="tns:GetMerchandiseRemainHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseLastBuyRate">
+      <wsdl:input message="tns:GetMerchandiseLastBuyRateHttpPostIn" />
+      <wsdl:output message="tns:GetMerchandiseLastBuyRateHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseUnit">
+      <wsdl:input message="tns:AddMerchandiseUnitHttpPostIn" />
+      <wsdl:output message="tns:AddMerchandiseUnitHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseList">
+      <wsdl:input message="tns:GetMerchandiseListHttpPostIn" />
+      <wsdl:output message="tns:GetMerchandiseListHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccountingTransaction">
+      <wsdl:input message="tns:CreateAccountingTransactionHttpPostIn" />
+      <wsdl:output message="tns:CreateAccountingTransactionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountingArticle">
+      <wsdl:input message="tns:AddAccountingArticleHttpPostIn" />
+      <wsdl:output message="tns:AddAccountingArticleHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CommitAccountingTransaction">
+      <wsdl:input message="tns:CommitAccountingTransactionHttpPostIn" />
+      <wsdl:output message="tns:CommitAccountingTransactionHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <wsdl:input message="tns:GetAccountBalanceHttpPostIn" />
+      <wsdl:output message="tns:GetAccountBalanceHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <wsdl:input message="tns:GetAccountTransactionsHttpPostIn" />
+      <wsdl:output message="tns:GetAccountTransactionsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input message="tns:AddAccountHttpPostIn" />
+      <wsdl:output message="tns:AddAccountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccount">
+      <wsdl:input message="tns:AddFloatingAccountHttpPostIn" />
+      <wsdl:output message="tns:AddFloatingAccountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccountWithSpecifiedCode">
+      <wsdl:input message="tns:AddFloatingAccountWithSpecifiedCodeHttpPostIn" />
+      <wsdl:output message="tns:AddFloatingAccountWithSpecifiedCodeHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountingServiceSoap" type="tns:AccountingServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddLegalCustomer">
+      <soap:operation soapAction="http://tempuri.org/AddLegalCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRealCustomer">
+      <soap:operation soapAction="http://tempuri.org/AddRealCustomer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypes">
+      <soap:operation soapAction="http://tempuri.org/GetCustomerTypes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFactor">
+      <soap:operation soapAction="http://tempuri.org/CreateFactor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddArticle">
+      <soap:operation soapAction="http://tempuri.org/AddArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddArticleByCode">
+      <soap:operation soapAction="http://tempuri.org/AddArticleByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <soap:operation soapAction="http://tempuri.org/AddCost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitFactor">
+      <soap:operation soapAction="http://tempuri.org/CommitFactor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceiptOrder">
+      <soap:operation soapAction="http://tempuri.org/CreateReceiptOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderArticle">
+      <soap:operation soapAction="http://tempuri.org/AddReceiptOrderArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderSerial">
+      <soap:operation soapAction="http://tempuri.org/AddReceiptOrderSerial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitReceiptOrder">
+      <soap:operation soapAction="http://tempuri.org/CommitReceiptOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandise">
+      <soap:operation soapAction="http://tempuri.org/AddMerchandise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseReturnsCode">
+      <soap:operation soapAction="http://tempuri.org/AddMerchandiseReturnsCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemainForAllStockRooms">
+      <soap:operation soapAction="http://tempuri.org/GetMerchandiseRemainForAllStockRooms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemain">
+      <soap:operation soapAction="http://tempuri.org/GetMerchandiseRemain" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseLastBuyRate">
+      <soap:operation soapAction="http://tempuri.org/GetMerchandiseLastBuyRate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseUnit">
+      <soap:operation soapAction="http://tempuri.org/AddMerchandiseUnit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseList">
+      <soap:operation soapAction="http://tempuri.org/GetMerchandiseList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccountingTransaction">
+      <soap:operation soapAction="http://tempuri.org/CreateAccountingTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountingArticle">
+      <soap:operation soapAction="http://tempuri.org/AddAccountingArticle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitAccountingTransaction">
+      <soap:operation soapAction="http://tempuri.org/CommitAccountingTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <soap:operation soapAction="http://tempuri.org/GetAccountBalance" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <soap:operation soapAction="http://tempuri.org/GetAccountTransactions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://tempuri.org/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccount">
+      <soap:operation soapAction="http://tempuri.org/AddFloatingAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccountWithSpecifiedCode">
+      <soap:operation soapAction="http://tempuri.org/AddFloatingAccountWithSpecifiedCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFiscalPeriodId">
+      <soap:operation soapAction="http://tempuri.org/GetFiscalPeriodId" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AccountingServiceSoap12" type="tns:AccountingServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddLegalCustomer">
+      <soap12:operation soapAction="http://tempuri.org/AddLegalCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRealCustomer">
+      <soap12:operation soapAction="http://tempuri.org/AddRealCustomer" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypes">
+      <soap12:operation soapAction="http://tempuri.org/GetCustomerTypes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFactor">
+      <soap12:operation soapAction="http://tempuri.org/CreateFactor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddArticle">
+      <soap12:operation soapAction="http://tempuri.org/AddArticle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddArticleByCode">
+      <soap12:operation soapAction="http://tempuri.org/AddArticleByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <soap12:operation soapAction="http://tempuri.org/AddCost" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitFactor">
+      <soap12:operation soapAction="http://tempuri.org/CommitFactor" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceiptOrder">
+      <soap12:operation soapAction="http://tempuri.org/CreateReceiptOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderArticle">
+      <soap12:operation soapAction="http://tempuri.org/AddReceiptOrderArticle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderSerial">
+      <soap12:operation soapAction="http://tempuri.org/AddReceiptOrderSerial" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitReceiptOrder">
+      <soap12:operation soapAction="http://tempuri.org/CommitReceiptOrder" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandise">
+      <soap12:operation soapAction="http://tempuri.org/AddMerchandise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseReturnsCode">
+      <soap12:operation soapAction="http://tempuri.org/AddMerchandiseReturnsCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemainForAllStockRooms">
+      <soap12:operation soapAction="http://tempuri.org/GetMerchandiseRemainForAllStockRooms" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemain">
+      <soap12:operation soapAction="http://tempuri.org/GetMerchandiseRemain" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseLastBuyRate">
+      <soap12:operation soapAction="http://tempuri.org/GetMerchandiseLastBuyRate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseUnit">
+      <soap12:operation soapAction="http://tempuri.org/AddMerchandiseUnit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseList">
+      <soap12:operation soapAction="http://tempuri.org/GetMerchandiseList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccountingTransaction">
+      <soap12:operation soapAction="http://tempuri.org/CreateAccountingTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountingArticle">
+      <soap12:operation soapAction="http://tempuri.org/AddAccountingArticle" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CommitAccountingTransaction">
+      <soap12:operation soapAction="http://tempuri.org/CommitAccountingTransaction" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountBalance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountTransactions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap12:operation soapAction="http://tempuri.org/AddAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccount">
+      <soap12:operation soapAction="http://tempuri.org/AddFloatingAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccountWithSpecifiedCode">
+      <soap12:operation soapAction="http://tempuri.org/AddFloatingAccountWithSpecifiedCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFiscalPeriodId">
+      <soap12:operation soapAction="http://tempuri.org/GetFiscalPeriodId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AccountingServiceHttpGet" type="tns:AccountingServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="AddLegalCustomer">
+      <http:operation location="/AddLegalCustomer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRealCustomer">
+      <http:operation location="/AddRealCustomer" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypes">
+      <http:operation location="/GetCustomerTypes" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFactor">
+      <http:operation location="/CreateFactor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddArticle">
+      <http:operation location="/AddArticle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticleByCode">
+      <http:operation location="/AddArticleByCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <http:operation location="/AddCost" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CommitFactor">
+      <http:operation location="/CommitFactor" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceiptOrder">
+      <http:operation location="/CreateReceiptOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderArticle">
+      <http:operation location="/AddReceiptOrderArticle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderSerial">
+      <http:operation location="/AddReceiptOrderSerial" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CommitReceiptOrder">
+      <http:operation location="/CommitReceiptOrder" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandise">
+      <http:operation location="/AddMerchandise" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseReturnsCode">
+      <http:operation location="/AddMerchandiseReturnsCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemainForAllStockRooms">
+      <http:operation location="/GetMerchandiseRemainForAllStockRooms" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemain">
+      <http:operation location="/GetMerchandiseRemain" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseLastBuyRate">
+      <http:operation location="/GetMerchandiseLastBuyRate" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseUnit">
+      <http:operation location="/AddMerchandiseUnit" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseList">
+      <http:operation location="/GetMerchandiseList" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccountingTransaction">
+      <http:operation location="/CreateAccountingTransaction" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountingArticle">
+      <http:operation location="/AddAccountingArticle" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CommitAccountingTransaction">
+      <http:operation location="/CommitAccountingTransaction" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <http:operation location="/GetAccountBalance" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <http:operation location="/GetAccountTransactions" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <http:operation location="/AddAccount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccount">
+      <http:operation location="/AddFloatingAccount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccountWithSpecifiedCode">
+      <http:operation location="/AddFloatingAccountWithSpecifiedCode" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AccountingServiceHttpPost" type="tns:AccountingServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="AddLegalCustomer">
+      <http:operation location="/AddLegalCustomer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddRealCustomer">
+      <http:operation location="/AddRealCustomer" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomerTypes">
+      <http:operation location="/GetCustomerTypes" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateFactor">
+      <http:operation location="/CreateFactor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddArticle">
+      <http:operation location="/AddArticle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AddArticleByCode">
+      <http:operation location="/AddArticleByCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AddCost">
+      <http:operation location="/AddCost" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CommitFactor">
+      <http:operation location="/CommitFactor" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReceiptOrder">
+      <http:operation location="/CreateReceiptOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderArticle">
+      <http:operation location="/AddReceiptOrderArticle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddReceiptOrderSerial">
+      <http:operation location="/AddReceiptOrderSerial" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CommitReceiptOrder">
+      <http:operation location="/CommitReceiptOrder" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandise">
+      <http:operation location="/AddMerchandise" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseReturnsCode">
+      <http:operation location="/AddMerchandiseReturnsCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemainForAllStockRooms">
+      <http:operation location="/GetMerchandiseRemainForAllStockRooms" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseRemain">
+      <http:operation location="/GetMerchandiseRemain" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseLastBuyRate">
+      <http:operation location="/GetMerchandiseLastBuyRate" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddMerchandiseUnit">
+      <http:operation location="/AddMerchandiseUnit" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMerchandiseList">
+      <http:operation location="/GetMerchandiseList" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateAccountingTransaction">
+      <http:operation location="/CreateAccountingTransaction" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccountingArticle">
+      <http:operation location="/AddAccountingArticle" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output />
+    </wsdl:operation>
+    <wsdl:operation name="CommitAccountingTransaction">
+      <http:operation location="/CommitAccountingTransaction" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountBalance">
+      <http:operation location="/GetAccountBalance" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountTransactions">
+      <http:operation location="/GetAccountTransactions" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <http:operation location="/AddAccount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccount">
+      <http:operation location="/AddFloatingAccount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddFloatingAccountWithSpecifiedCode">
+      <http:operation location="/AddFloatingAccountWithSpecifiedCode" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountingService">
+    <wsdl:port name="AccountingServiceSoap" binding="tns:AccountingServiceSoap">
+      <soap:address location="http://10.175.21.9:8081/AccountingService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AccountingServiceSoap12" binding="tns:AccountingServiceSoap12">
+      <soap12:address location="http://10.175.21.9:8081/AccountingService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AccountingServiceHttpGet" binding="tns:AccountingServiceHttpGet">
+      <http:address location="http://10.175.21.9:8081/AccountingService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AccountingServiceHttpPost" binding="tns:AccountingServiceHttpPost">
+      <http:address location="http://10.175.21.9:8081/AccountingService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
