@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.fceo.ir/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://www.fceo.ir/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.fceo.ir/">
+      <s:element name="GetMemberInfoByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MemberType" type="tns:MemberType" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="MemberType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Temporary" />
+          <s:enumeration value="Permanent" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GetMemberInfoByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetMemberInfoByCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewMembersCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewMembersCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewMembersCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewMembersCodeByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MeId" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="MemberType" type="tns:MemberType" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewMembersCodeByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewMembersCodeByTypeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProjectId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProjectInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProjectInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewProjectsCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ProjectCode" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="AgentId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewProjectsCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewProjectsCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoInfoByCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfficeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCoInfoByCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCoInfoByCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewCoCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="OfficeId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PassWord" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetNewCoCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetNewCoCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetMemberInfoByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetMemberInfoByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetMemberInfoByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetMemberInfoByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMembersCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewMembersCode" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMembersCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewMembersCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMembersCodeByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewMembersCodeByType" />
+  </wsdl:message>
+  <wsdl:message name="GetNewMembersCodeByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewMembersCodeByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProjectInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetProjectInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProjectInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewProjectsCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewProjectsCode" />
+  </wsdl:message>
+  <wsdl:message name="GetNewProjectsCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewProjectsCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCoInfoByCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCoInfoByCode" />
+  </wsdl:message>
+  <wsdl:message name="GetCoInfoByCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCoInfoByCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetNewCoCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetNewCoCode" />
+  </wsdl:message>
+  <wsdl:message name="GetNewCoCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetNewCoCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="AccountingWebServiceSoap">
+    <wsdl:operation name="GetMemberInfoByCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this func get a Member id &amp; member type and returns string list include new member ids that registerd after it</wsdl:documentation>
+      <wsdl:input message="tns:GetMemberInfoByCodeSoapIn" />
+      <wsdl:output message="tns:GetMemberInfoByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMembersCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this func get a Member id and returns string list include new member ids that registerd after it</wsdl:documentation>
+      <wsdl:input message="tns:GetNewMembersCodeSoapIn" />
+      <wsdl:output message="tns:GetNewMembersCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMembersCodeByType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this func get a Member id &amp; member type and returns string list include new member ids that registerd after it</wsdl:documentation>
+      <wsdl:input message="tns:GetNewMembersCodeByTypeSoapIn" />
+      <wsdl:output message="tns:GetNewMembersCodeByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this func get a project id and returns string array include project info</wsdl:documentation>
+      <wsdl:input message="tns:GetProjectInfoSoapIn" />
+      <wsdl:output message="tns:GetProjectInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewProjectsCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this func get a project id and Agent Id of  this project so returns string list include new project ids that registerd after this project in this agent </wsdl:documentation>
+      <wsdl:input message="tns:GetNewProjectsCodeSoapIn" />
+      <wsdl:output message="tns:GetNewProjectsCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCoInfoByCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this func get an office id and returns string array include office info</wsdl:documentation>
+      <wsdl:input message="tns:GetCoInfoByCodeSoapIn" />
+      <wsdl:output message="tns:GetCoInfoByCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCoCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">this func get an office id and returns string list include new office ids that registerd after it</wsdl:documentation>
+      <wsdl:input message="tns:GetNewCoCodeSoapIn" />
+      <wsdl:output message="tns:GetNewCoCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AccountingWebServiceSoap" type="tns:AccountingWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMemberInfoByCode">
+      <soap:operation soapAction="http://www.fceo.ir/GetMemberInfoByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMembersCode">
+      <soap:operation soapAction="http://www.fceo.ir/GetNewMembersCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMembersCodeByType">
+      <soap:operation soapAction="http://www.fceo.ir/GetNewMembersCodeByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectInfo">
+      <soap:operation soapAction="http://www.fceo.ir/GetProjectInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewProjectsCode">
+      <soap:operation soapAction="http://www.fceo.ir/GetNewProjectsCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoInfoByCode">
+      <soap:operation soapAction="http://www.fceo.ir/GetCoInfoByCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCoCode">
+      <soap:operation soapAction="http://www.fceo.ir/GetNewCoCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AccountingWebServiceSoap12" type="tns:AccountingWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetMemberInfoByCode">
+      <soap12:operation soapAction="http://www.fceo.ir/GetMemberInfoByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMembersCode">
+      <soap12:operation soapAction="http://www.fceo.ir/GetNewMembersCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewMembersCodeByType">
+      <soap12:operation soapAction="http://www.fceo.ir/GetNewMembersCodeByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjectInfo">
+      <soap12:operation soapAction="http://www.fceo.ir/GetProjectInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewProjectsCode">
+      <soap12:operation soapAction="http://www.fceo.ir/GetNewProjectsCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCoInfoByCode">
+      <soap12:operation soapAction="http://www.fceo.ir/GetCoInfoByCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNewCoCode">
+      <soap12:operation soapAction="http://www.fceo.ir/GetNewCoCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="AccountingWebService">
+    <wsdl:port name="AccountingWebServiceSoap" binding="tns:AccountingWebServiceSoap">
+      <soap:address location="http://fceo.ir/accountingwebservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AccountingWebServiceSoap12" binding="tns:AccountingWebServiceSoap12">
+      <soap12:address location="http://fceo.ir/accountingwebservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

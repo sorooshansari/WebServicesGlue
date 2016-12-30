@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://fceo.ir/accountingwebservice.asmx?wsdl" docRef="http://fceo.ir/accountingwebservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://fceo.ir/accountingwebservice.asmx" xmlns:q1="http://www.fceo.ir/" binding="q1:AccountingWebServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://fceo.ir/accountingwebservice.asmx" xmlns:q2="http://www.fceo.ir/" binding="q2:AccountingWebServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

@@ -23,10 +23,10 @@ namespace testApp
         }
         public void startImporting()
         {
-            ImportTemporaryUsers();
+            //ImportTemporaryUsers();
             ImportPermannentUsers();
-            ImportCooperativeUsers();
-            ImportProjectUsers();
+            //ImportCooperativeUsers();
+            //ImportProjectUsers();
         }
 
         #region tools
@@ -49,8 +49,8 @@ namespace testApp
         {
             try
             {
-                //int maxCode = (int)dbManager.GetMaxCode(ParantId.permanent);
-                int maxCode = 30685;
+                //int maxCode = (int)dbManager.GetMaxCode(ParantId.permanent, fiscalPeriod);
+                int maxCode = 30616;
 
                 string str_NewCods = NezamSenfiWS.GetNewMembersCodeByType(maxCode, MemberType.Permanent, Credentials.username, Credentials.password);
                 List<int> NewCods = toListOfInt(str_NewCods);
@@ -61,9 +61,8 @@ namespace testApp
                         string str_memberInfo = NezamSenfiWS.GetMemberInfoByCode(code, MemberType.Permanent, Credentials.username, Credentials.password);
                         List<string> memberInfo = toListOfString(str_memberInfo);
                         string memberFullName = string.Format("{0} {1}", memberInfo[2], memberInfo[3]);
-                        Console.WriteLine(memberFullName);
-
-                        //string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.permanent, code.ToString(), fiscalPeriod, memberFullName);
+                        string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.permanent, code.ToString(), fiscalPeriod, memberFullName);
+                        Console.WriteLine(res);
                     }
                     catch (Exception ex)
                     {
@@ -80,8 +79,8 @@ namespace testApp
         {
             try
             {
-                //int maxCode = (int)dbManager.GetMaxCode(ParantId.temporary);
-                int maxCode = 21650;
+                int maxCode = (int)dbManager.GetMaxCode(ParantId.temporary, fiscalPeriod);
+                //int maxCode = 21650;
 
                 string str_NewCods = NezamSenfiWS.GetNewMembersCodeByType(maxCode, MemberType.Temporary, Credentials.username, Credentials.password);
                 List<int> NewCods = toListOfInt(str_NewCods);
@@ -93,7 +92,7 @@ namespace testApp
                         List<string> memberInfo = toListOfString(str_memberInfo);
                         string memberFullName = string.Format("{0} {1}", memberInfo[2], memberInfo[3]);
                         Console.WriteLine(memberFullName);
-                        //string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.temporary, code.ToString(), fiscalPeriod, memberFullName);
+                        string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.temporary, code.ToString(), fiscalPeriod, memberFullName);
                     }
                     catch (Exception ex)
                     {
@@ -111,8 +110,8 @@ namespace testApp
         {
             try
             {
-                //int maxCode = (int)dbManager.GetMaxCode(ParantId.cooperative);
-                int maxCode = 824;
+                int maxCode = (int)dbManager.GetMaxCode(ParantId.cooperative, fiscalPeriod);
+                //int maxCode = 824;
 
                 string str_NewCods = NezamSenfiWS.GetNewCoCode(maxCode, Credentials.username, Credentials.password);
                 List<int> NewCods = toListOfInt(str_NewCods);
@@ -124,7 +123,7 @@ namespace testApp
                         List<string> memberInfo = toListOfString(str_memberInfo);
                         string memberFullName = string.Format("{0}_{1}", memberInfo[1], memberInfo[4]);
                         Console.WriteLine(memberFullName);
-                        //string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.cooperative, code.ToString(), fiscalPeriod, memberFullName);
+                        string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.cooperative, code.ToString(), fiscalPeriod, memberFullName);
                     }
                     catch (Exception ex)
                     {
@@ -142,8 +141,8 @@ namespace testApp
         {
             try
             {
-                //int maxCode = (int)dbManager.GetMaxCode(ParantId.project);
-                int maxCode = 41170;
+                int maxCode = (int)dbManager.GetMaxCode(ParantId.project, fiscalPeriod);
+                //int maxCode = 41170;
 
                 string str_NewCods = NezamSenfiWS.GetNewProjectsCode(maxCode, AgentId.shiraz, Credentials.username, Credentials.password);
                 List<int> NewCods = toListOfInt(str_NewCods);
@@ -155,7 +154,7 @@ namespace testApp
                         List<string> memberInfo = toListOfString(str_memberInfo);
                         string memberFullName = string.Format("{0}_{1}", memberInfo[2], memberInfo[6]);
                         Console.WriteLine(memberFullName);
-                        //string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.project, code.ToString(), fiscalPeriod, memberFullName);
+                        string res = payvastWS.AddFloatingAccountWithSpecifiedCode(ParantCode.project, code.ToString(), fiscalPeriod, memberFullName);
                     }
                     catch (Exception ex)
                     {
